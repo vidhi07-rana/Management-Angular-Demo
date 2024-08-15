@@ -1,0 +1,49 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50px;
+  }
+  
+  /* Article section */
+  article {
+    background-color: #f4f4f4;  /* Light grey background */
+    padding: 20px;  /* Padding around the content */
+    border-radius: 50px;  /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  }
+  
+  /* Header inside article */
+  article header {
+    background-color: #333;  /* Dark background for the header */
+    color: #fff;  /* White text */
+    padding: 10px 20px;  /* Padding for header content */
+    display: flex;
+    align-items: center;  /* Align icon and title vertically */
+    border-radius: 50px;  /* Rounded corners on the top */
+    margin-bottom: 15px;  /* Space below the header */
+  }
+  
+  /* Icon inside the header */
+  article header img {
+    height: 50px;  /* Size of the icon */
+    margin-right: 10px;  /* Space between icon and title */
+  }
+  
+  /* Title inside the header */
+  article header h2 {
+    font-size: 1.8em;  /* Larger font size for the title */
+  }
+  
+  /* Status content inside article */
+  #status {
+    margin-top: 10px;  /* Space above the status content */
+  }
+  
+  #status p {
+    font-size: 1.2em;  /* Font size for status text */
+    color: #333;  /* Dark text color for readability */
+    margin-bottom: 10px;  /* Space below the text */
+  }
+  

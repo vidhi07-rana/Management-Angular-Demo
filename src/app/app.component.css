@@ -1,0 +1,117 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 40px;
+
+  }
+  
+  /* Header section */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo section */
+  #logo img {
+    height: 60px;
+  }
+  
+  /* Navigation bar */
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav button .icon {
+    margin-left: 5px;
+  }
+  
+  /* Main dashboard section */
+  main {
+    padding: 20px;
+  }
+  
+  #dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Dashboard item */
+  #dashboard-item, .dashboard-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #dashboard-item header, .dashboard-item header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  #dashboard-item header img, .dashboard-item header img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  #chart {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    height: 150px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #chart div {
+    width: 0px;
+    background-color: #3498db;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    #dashboard {
+      grid-template-columns: 1fr;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50px;
+  }
+  
+  /* Server Status section */
+  .server-status {
+    background-color: #f4f4f4;  /* Light grey background */
+    padding: 20px;  /* Padding around the content */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  }
+  
+  .server-status header {
+    background-color: #333;  /* Dark background for the header */
+    color: #fff;  /* White text */
+    padding: 10px 20px;  /* Padding for header content */
+    display: flex;
+    align-items: center;  /* Align icon and title vertically */
+    border-radius: 50px ;  /* Rounded corners on the top */
+    margin-bottom: 15px;  /* Space below the header */
+  }
+  
+  .server-status header img {
+    height: 50px;  /* Size of the icon */
+    margin-right: 10px;  /* Space between icon and title */
+  }
+  
+  .server-status header h2 {
+    font-size: 1.8em;  /* Larger font size for the title */
+  }
+  
+  .status-content p {
+    margin-bottom: 10px;  /* Space between paragraphs */
+    font-size: 1.2em;  /* Slightly larger font for status text */
+  }
+  
