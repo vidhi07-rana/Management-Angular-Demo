@@ -1,0 +1,13 @@
+button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+  }
+  nav button .icon {
+    margin-left: 5px;
+  }

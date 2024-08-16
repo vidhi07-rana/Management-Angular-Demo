@@ -5,19 +5,23 @@
   <div id="dashboard">
     
     <div id="dashboard-item">
-    
+    <app-dashboard-item [image]="{src:'assets/wifi.png', alt:'A signal symbol '}" title="Server Status">
 <app-server-status></app-server-status>
-
+    </app-dashboard-item>
     </div>
 
 <div class="dashboars-item">
+  <app-dashboard-item [image]="{src:'assets/chart.png', alt:'A globe'}" title="Traffic">
 <app-traffic></app-traffic>
+</app-dashboard-item>
 </div>
 
 
 
 <div class="dashboard-item">
+<app-dashboard-item [image]="{src:'assets/ticket2.png', alt:'A list of items'}" title="Support Tickets">
  <app-ticket></app-ticket>
+</app-dashboard-item>
   </div>
   </div>
 

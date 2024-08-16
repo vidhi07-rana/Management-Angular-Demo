@@ -1,0 +1,17 @@
+header {
+    background-color: #333;  /* Dark background for the header */
+    color: #fff;  /* White text */
+    padding: 10px 20px;  /* Padding for header content */
+    display: flex;
+    align-items: center;  /* Align icon and title vertically */
+    border-radius: 50px ;  /* Rounded corners on the top */
+    margin-bottom: 15px;  /* Space below the header */
+  }
+  header img {
+    border-radius: 30px;
+    height: 50px;  /* Size of the icon */
+    margin-right: 10px;  /* Space between icon and title */
+  }
+  header h2 {
+    font-size: 1.8em;
+  }
