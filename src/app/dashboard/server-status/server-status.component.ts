@@ -9,6 +9,6 @@ import { DashboardItemComponent } from "../dashboard-item/dashboard-item.compone
   styleUrl: './server-status.component.css'
 })
 export class ServerStatusComponent {
-  currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+  currentStatus: 'online' | 'offline' | 'unknown' = 'online';
 
 }
