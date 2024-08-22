@@ -1,49 +1,65 @@
-/* Reset some default browser styles */
+/* General reset */
 * {
-    margin: 0;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 50px;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  justify-content: space-between; /* Space between the content and form */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px;
+}
+
+/* Tickets section (left side) */
+ul {
+  list-style: none;
+  flex: 1;
+  margin-right: 20px; /* Space between content and form */
+}
+
+ul p {
+  background-color: #f4f4f4; /* Light grey background for ticket details */
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* No tickets available message */
+ul p.no-tickets {
+  color: #999; /* Light grey text */
+  text-align: center;
+}
+
+/* New ticket form (right side) */
+#new-ticket {
+  flex: 0 1 300px; /* Form takes up a fixed width */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#new-ticket app-new-ticket {
+  width: 100%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack content and form on smaller screens */
   }
-  
-  /* Article section */
-  article {
-    background-color: #f4f4f4;  /* Light grey background */
-    padding: 20px;  /* Padding around the content */
-    border-radius: 50px;  /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+
+  ul {
+    margin-right: 0;
+    margin-bottom: 20px; /* Space between content and form */
   }
-  
-  /* Header inside article */
-  article header {
-    background-color: #333;  /* Dark background for the header */
-    color: #fff;  /* White text */
-    padding: 10px 20px;  /* Padding for header content */
-    display: flex;
-    align-items: center;  /* Align icon and title vertically */
-    border-radius: 50px;  /* Rounded corners on the top */
-    margin-bottom: 15px;  /* Space below the header */
+
+  #new-ticket {
+    flex: 1;
+    max-width: 100%;
   }
-  
-  /* Icon inside the header */
-  article header img {
-    height: 50px;  /* Size of the icon */
-    margin-right: 10px;  /* Space between icon and title */
-  }
-  
-  /* Title inside the header */
-  article header h2 {
-    font-size: 1.8em;  /* Larger font size for the title */
-  }
-  
-  /* Status content inside article */
-  #status {
-    margin-top: 10px;  /* Space above the status content */
-  }
-  
-  #status p {
-    font-size: 1.2em;  /* Font size for status text */
-    color: #333;  /* Dark text color for readability */
-    margin-bottom: 10px;  /* Space below the text */
-  }
-  
+}

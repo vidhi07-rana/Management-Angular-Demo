@@ -1,5 +1,25 @@
+<div>
 
-      <div id="status">
-<app-new-ticket></app-new-ticket>
-        </div>
-    
+      <ul>
+          @for (ticket of tickets; track ticket.id) {
+             
+                  <!-- <p>{{ticket.title}}</p>
+                  <p>{{ticket.request}}</p>
+                  <p>{{ticket.status}}</p>
+                  <p>{{ticket.id}}</p>
+                   -->
+<p  >                <app-lifecycle [data]="ticket"/>
+</p>
+
+                  <!-- <p><app-lifecycle/><p> -->
+                     
+
+          }@empty {
+            <p>No tickets avaialable</p>
+          }
+      </ul>
+      </div>
+  
+      <div id="new-ticket">
+            <app-new-ticket (add)="onAdd($event)"></app-new-ticket>
+          </div>

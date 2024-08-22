@@ -1,1 +1,29 @@
-<p>lifecycle works!</p>
+<article>
+    <h3>
+      <!-- Dynamic Class Binding -->
+      <div [class]="{
+        'ticket-open': data?.status === 'open',
+        'ticket-closed':data?.status === 'close' ,
+      }"></div>
+  
+      <button (click)="onToggleDetails()">
+        <span class="text">{{ data?.title }}</span>
+        <!-- SVG Icon, visible only if `detailsVisible` is true -->
+        <span *ngIf="ditailsVisible()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
+    </h3>
+  
+    <!-- Conditionally display request and action button based on the `detailsVisible` signal -->
+    <div *ngIf="ditailsVisible()">
+      <p>{{ data?.request }}</p>
+      <p *ngIf="data?.status === 'open'">
+        <button (click)="markAsCompleted()">Mark as completed</button>
+      </p>
+    </div>
+  </article>
+  
