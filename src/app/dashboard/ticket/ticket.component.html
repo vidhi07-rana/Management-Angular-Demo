@@ -8,7 +8,7 @@
                   <p>{{ticket.status}}</p>
                   <p>{{ticket.id}}</p>
                    -->
-<p  >                <app-lifecycle [data]="ticket"/>
+<p  >                <app-lifecycle [data]="ticket" (close)="onCloseTicket(ticket.id)"/>
 </p>
 
                   <!-- <p><app-lifecycle/><p> -->

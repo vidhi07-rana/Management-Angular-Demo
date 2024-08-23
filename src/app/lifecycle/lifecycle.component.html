@@ -1,29 +1,39 @@
-<article>
-    <h3>
-      <!-- Dynamic Class Binding -->
-      <div [class]="{
-        'ticket-open': data?.status === 'open',
-        'ticket-closed':data?.status === 'close' ,
-      }"></div>
-  
-      <button (click)="onToggleDetails()">
-        <span class="text">{{ data?.title }}</span>
-        <!-- SVG Icon, visible only if `detailsVisible` is true -->
-        <span *ngIf="ditailsVisible()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
-      </button>
-    </h3>
-  
-    <!-- Conditionally display request and action button based on the `detailsVisible` signal -->
-    <div *ngIf="ditailsVisible()">
-      <p>{{ data?.request }}</p>
-      <p *ngIf="data?.status === 'open'">
-        <button (click)="markAsCompleted()">Mark as completed</button>
-      </p>
+<article class="card">
+  <div class="card-header">
+    <!-- Icon on the left side -->
+    <span class="header-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+           stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+
+    <!-- Dynamic Class Binding -->
+    <div [class]="{
+      'ticket-open': data().status === 'open',
+      'ticket-closed': data().status === 'close'
+    }">
+      <!-- Image for closed ticket -->
+      <img *ngIf="data().status === 'close'" src="assets/tickmark.png" alt="Ticket Closed" class="closed-icon">
     </div>
-  </article>
-  
+
+    <button (click)="onToggleDetails()">
+      <span class="text" style="padding: 25px 20px; margin-left: 17px;">{{ data().title }} ﹀</span>
+      <!-- SVG Icon, visible only if `detailsVisible` is true -->
+      <span *ngIf="ditailsVisible()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <!-- Conditionally display request and action button based on the `detailsVisible` signal -->
+  <div class="details-container" *ngIf="ditailsVisible()">
+    <p>{{ data().request }}</p>
+    <p *ngIf="data().status === 'open'" >
+      <button (click)="markAsCompleted()">Mark as completed</button>
+    </p>
+  </div>
+</article>

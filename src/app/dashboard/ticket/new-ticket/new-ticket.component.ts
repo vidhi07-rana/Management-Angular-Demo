@@ -15,16 +15,19 @@ export class NewTicketComponent  {
 @ViewChild ('form') form? :ElementRef<HTMLFormElement>
 // @Output() add? = new EventEmitter<{title:string; text: string}>();
 add = output<{title:string; text: string}>()
+enteredTitle = '';
+enteredText ='';
+
 // private form = viewChild.required <ElementRef<HTMLFormElement>>('form') 
   // onSubmit(titleElement:HTMLInputElement ){
   //   console.dir(titleElement.value)
   // }
   
-  onSubmit(title : string , ticketText:string){
-this.add.emit({title:title, text: ticketText})
-  this.form?.nativeElement.reset()
-
-
+  onSubmit(){
+this.add.emit({title:this.enteredTitle, text: this.enteredText})
+  // this.form?.nativeElement.reset()
+  this.enteredText='';
+  this.enteredTitle='';
   }
   // ngOnInit(): void {
   //   console.log('ONINIT');

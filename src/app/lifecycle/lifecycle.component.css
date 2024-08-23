@@ -1,0 +1,138 @@
+/* Card Container */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+    padding: 16px; /* Add padding inside the card for spacing */
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header section with dynamic status */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; /* Add spacing below the header */
+  }
+  button {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the text and icon inside the button */
+  padding: 7px 20px; /* Adjusted padding to increase the width */
+  height: 50px;
+}button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the text and icon inside the button */
+    padding: 7px 20px; /* Adjusted padding to increase the width */
+    height: 50px;
+  }
+  
+  /* Styles for the ticket status */
+  .ticket-open, .ticket-closed {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  
+  .ticket-closed {
+    position: relative;
+  }
+  
+  .closed-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+  }
+  
+  
+  /* Styling for the text inside the box */
+  .card-header div span {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card-header {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers content vertically if needed */
+    padding: 16px;
+  }
+  
+  /* Styling for the button */
+  button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the text and icon inside the button */
+    padding: 7px 10px; /* Adjusted padding to increase the width */
+    height: 50px;
+  }
+  
+  /* SVG icon */
+  button svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    transition: transform 0.3s;
+  }
+  
+  /* Rotate icon when dropdown is visible */
+  button svg.rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown content within the button */
+  .details-container {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Show dropdown content when details are visible */
+  .details-container.open {
+    display: block;
+  }
+  
+  /* Paragraph inside the details section */
+  p {
+    margin: 0;
+    padding: 8px 0;
+  }
+  
+  /* Button inside the details section */
+  p button {
+    background-color:black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  p button:hover {
+    background-color: #0056b3;
+  }
+  

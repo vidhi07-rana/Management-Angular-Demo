@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, input, Input, output, signal } from '@angular/core';
 import { Tickets } from '../dashboard/ticket/tickets.model';
 import { CommonModule } from '@angular/common';
 
@@ -10,12 +10,19 @@ import { CommonModule } from '@angular/common';
   styleUrl: './lifecycle.component.css'
 })
 export class LifecycleComponent {
-@Input() data ?: Tickets
+// @Input() data ?: Tickets
+data = input.required<Tickets>({})
+close = output();
 ditailsVisible = signal(false)
 
 
 onToggleDetails(){
-  this.ditailsVisible.set(!this.ditailsVisible())
+  // this.ditailsVisible.set(!this.ditailsVisible())
+  this.ditailsVisible.update((wasVisble)=>{
+    return !wasVisble;
+  })
 }
-markAsCompleted(){}
+markAsCompleted(){
+  this.close.emit();
+}
 }
